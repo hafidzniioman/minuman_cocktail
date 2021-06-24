@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardBackgroundColor="#f7f7f7"
+    app:cardCornerRadius="@dimen/dimen_1dp"
+    app:cardElevation="@dimen/dimen_1dp"
+    android:padding="@dimen/dimen_3dp"
+    android:layout_margin="@dimen/dimen_3dp"
+    android:id="@+id/main_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/parentPanel"
+        android:gravity="center_horizontal">
+
+        <com.example.myapplication.ui.custom.SquareImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cocktail_image"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/cocktail_name"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_5dp"
+            android:id="@+id/cocktail_name"
+            android:layout_marginStart="@dimen/dimen_5dp"
+            android:layout_marginLeft="@dimen/dimen_5dp"
+            tools:text="@string/app_name"
+            android:textSize="12sp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            app:layout_constraintTop_toBottomOf="@id/cocktail_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
