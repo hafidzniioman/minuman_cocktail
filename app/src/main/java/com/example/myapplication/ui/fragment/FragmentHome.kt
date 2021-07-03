@@ -168,7 +168,7 @@ class FragmentHome: Fragment() {
 
             override fun onFailure(call: Call<Any>, t: Throwable) {
                 Log.e("ERROR", t.message!!)
-                Toast.makeText(context, "Oooops. Unable to fetch drinks", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Unable to fetch drinks", Toast.LENGTH_SHORT).show()
             }
         })
     }

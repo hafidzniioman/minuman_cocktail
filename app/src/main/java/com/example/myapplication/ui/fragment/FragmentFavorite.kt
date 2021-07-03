@@ -26,6 +26,7 @@ class FragmentFavorite : androidx.fragment.app.Fragment(), Callbacks {
     private var favsAdapter: SimpleAdapter? = null
     private var favoritesDb: AppDatabase? = null
     private var favoritesDao: CocktailDao? = null
+
     private val callbacks = object : SimpleCallbacks {
         override fun bindView(view: View, item: Any, position: Int) {
             item as Fav
